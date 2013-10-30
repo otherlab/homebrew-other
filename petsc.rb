@@ -10,7 +10,7 @@ class Petsc < Formula
 
   def install
     ENV.deparallelize
-    system "./configure", "--with-debugging=0", "--with-shared-libraries=1", "--with-fortran=0", "--prefix=#{prefix} "--LDFLAGS=\'/usr/X11\'"
+    system "./configure", "--with-debugging=0", "--with-shared-libraries=1", "--with-fortran=0", "--prefix=#{prefix}", "--ldflags='/usr/X11'"
     system "make all"
     system "make test"
     system "make install"
